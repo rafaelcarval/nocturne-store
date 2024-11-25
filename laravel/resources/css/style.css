@@ -1,0 +1,711 @@
+/* Garante que a página ocupe toda a altura da janela */
+html, body {
+    height: 100%; /* Faz o body ocupar toda a altura */
+    margin: 0; /* Remove margens padrão */
+    display: flex;
+    flex-direction: column; /* Torna o layout flexível verticalmente */
+}
+
+/* Ajuste para o tamanho do logo */
+.navbar .logo {
+    height: 180px; /* Altere o valor para o tamanho desejado */
+    max-height: 180px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Aumentar o tamanho dos ícones para o dobro */
+.navbar .fa-lg {
+    font-size: 2rem; /* Ajusta para o dobro do tamanho original */
+}
+
+/* Texto abaixo do logo */
+.navbar .text-center p {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+}
+
+/* Efeitos para ícones */
+.navbar .d-flex a {
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.navbar .d-flex a:hover {
+    transform: scale(1.1);
+}
+
+/* Faz o rodapé permanecer no final */
+main.container {
+    flex: 1; /* O conteúdo principal expande para preencher o espaço disponível */
+}
+
+footer {
+    background-color: #f8f9fa; /* Cor de fundo para o rodapé */
+    text-align: center; /* Centraliza o texto no rodapé */
+    padding: 10px 0; /* Adiciona espaçamento interno */
+    border-top: 1px solid #ddd; /* Adiciona uma borda superior */
+}
+
+footer {
+    font-size: 14px;
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #888; /* Adiciona um efeito de hover */
+}
+
+footer .fab {
+    transition: transform 0.3s ease;
+}
+
+footer .fab:hover {
+    transform: scale(1.1);
+}
+
+/* Define o tamanho fixo e consistente das imagens */
+.same-size {
+    width: 100%; /* Responsivo */
+    max-width: 500px; /* Largura máxima */
+    height: 600px; /* Altura fixa */
+    object-fit: cover; /* Garante preenchimento proporcional */
+    border: 1px solid #e6e6e6; /* Borda opcional */
+}
+
+/* Ajusta o texto abaixo das imagens */
+h4 {
+    font-size: 16px;
+    color: #888; /* Cor neutra */
+    text-transform: uppercase;
+    margin-top: 10px; /* Margem superior para separação */
+}
+
+/* Reduz a margem entre as colunas no modo responsivo */
+.row > .col-md-5 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Define o tamanho das imagens no carrossel */
+.carousel-image {
+    height: 200px; /* Altura fixa */
+    object-fit: cover; /* Garante o preenchimento proporcional sem distorções */
+}
+
+/* Ajuste dos cards no carrossel */
+.card {
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste do banner na seção "Sobre Nós" */
+.about-banner img {
+    max-width: 100%; /* Garante responsividade */
+    height: auto; /* Mantém proporção */
+    margin-bottom: 20px;
+}
+
+/* Estilo geral do card */
+.product-card {
+    width: 18rem;
+    border: 2px solid #ccc; /* Cor neutra para a borda */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para título, descrição e preço com background da imagem */
+.product-card .card-title,
+.product-card .card-text,
+.product-card .card-price {
+    font-size: 0.9rem;
+    color: #6b6b8e; /* Cinza azulado da paleta */
+    background-color: #f4f4fa; /* Fundo claro da paleta */
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+/* Título do produto */
+.product-card .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Descrição */
+.product-card .card-text {
+    font-size: 0.9rem;
+    color: #6b6b8e; /* Cinza azulado da paleta */
+    background-color: #f4f4fa; /* Fundo claro da paleta */
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Preço */
+.product-card .card-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333; /* Preto suave */
+    background-color: #eaeaea; /* Cinza neutro */
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Botões */
+.card-buttons .btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.card-buttons .btn-add-to-cart {
+    background-color: #4e4e9c; /* Azul escuro */
+    color: white;
+}
+
+.card-buttons .btn-add-to-cart:hover {
+    background-color: #3b3b7f; /* Azul mais escuro */
+    transform: scale(1.1);
+}
+
+.card-buttons .btn-view-product {
+    background-color: #d6b3d1; /* Lavanda da paleta */
+    color: white;
+}
+
+.card-buttons .btn-view-product:hover {
+    background-color: #b38ba8; /* Lavanda mais escura */
+    transform: scale(1.1);
+}
+
+/* Ícones nos botões */
+.card-buttons .btn i {
+    font-size: 1.2rem;
+}
+
+/* Posicionar as setas fora do carrossel */
+.custom-control-prev, .custom-control-next {
+    top: 50%; /* Centralizar verticalmente */
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border: none;
+    background: none;
+}
+
+.custom-control-prev {
+    left: -70px; /* Posicionar fora do carrossel à esquerda */
+}
+
+.custom-control-next {
+    right: -70px; /* Posicionar fora do carrossel à direita */
+}
+
+/* Estilo das setas */
+.custom-arrow {
+    font-size: 2rem; /* Tamanho maior para destaque */
+    color: #d6b3d1; /* Tom rosa/roxo da paleta */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-arrow:hover {
+    color: #b38ba8; /* Tom mais escuro no hover */
+    transform: scale(1.1); /* Efeito de zoom no hover */
+}
+
+.carousel-inner {
+    height: 440px !important;
+}
+
+.offcanvas {
+    background-color: #f8f9fa; /* Cor de fundo */
+}
+
+.offcanvas-title {
+    font-size: 1.5rem;
+    color: #6c757d;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    color: #6c757d;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #8c52ff; /* Cor de hover da paleta fornecida */
+}
+
+/* Breadcrumb */
+.breadcrumb a {
+    text-decoration: none;
+}
+.breadcrumb .breadcrumb-item.active {
+    color: #6c757d;
+}
+
+/* Títulos de categorias e produtos */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Botões */
+.btn-primary {
+    background-color: #8c52ff;
+    border-color: #8c52ff;
+}
+
+.btn-primary:hover {
+    background-color: #6b3fcc;
+    border-color: #6b3fcc;
+}
+
+/* Estilizando o menu de categorias */
+.list-group-item {
+    border: none;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.list-group-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.list-group-item a:hover {
+    color: #8c52ff;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.list-group-item a.fw-bold {
+    color: #8c52ff; /* Cor destacada */
+    font-weight: bold;
+}
+
+.list-group-item .fa-tag,
+.list-group-item .fa-list {
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.list-group-item a:hover .fa-tag,
+.list-group-item a:hover .fa-list {
+    color: #8c52ff;
+}
+
+.small.text-muted {
+    margin-right: 15px; /* Espaçamento entre o texto e os botões de paginação */
+}
+
+.card-image {
+    width: 100%; /* Ajusta a imagem para ocupar toda a largura do card */
+    height: 200px; /* Define uma altura padrão */
+    object-fit: cover; /* Garante que a imagem seja cortada para caber, mantendo o aspecto visual */
+    border-radius: 8px; /* (Opcional) Para bordas arredondadas */
+}
+
+.container_my-5_alt_margin{
+    margin-top: 1rem !important;
+}
+
+.sticky-menu {
+    position: sticky;
+    top: 10px; /* Define a distância do topo da página */
+    z-index: 1000; /* Garante que o menu esteja acima de outros elementos */
+    background-color: #fff; /* Fundo branco para legibilidade */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas (opcional) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+}
+
+.container_my-5_alt_margin {
+    margin-bottom: 100px; /* Ajusta o espaço no final para evitar sobreposição */
+}
+
+.btn-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-icon i {
+    font-size: 1.2rem;
+    color: #0489ff; /* Cor padrão do ícone */
+}
+
+.btn-icon:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.1);
+}
+
+.btn-icon:hover i {
+    color: #6f42c1; /* Cor do ícone ao passar o mouse */
+}
+
+.main-image-container {
+    width: 600px; /* Largura fixa do contêiner */
+    height: 500px; /* Altura fixa do contêiner */
+    display: flex; /* Centraliza a imagem com flexbox */
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    overflow: hidden; /* Esconde partes da imagem que ultrapassarem o contêiner */
+    background-color: #f8f9fa; /* Fundo para contraste (opcional) */
+    position: relative; /* Para o zoomLens ficar posicionado dentro */
+    border: 2px solid #ddd; /* Borda opcional para destaque */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}
+
+.main-image {
+    height: 100%;
+}
+
+.thumb-container {
+    display: flex;
+    gap: 10px;
+}
+
+.thumb img {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.zoom {
+    position: absolute;
+    border: 2px solid #ddd;
+    width: 100px;
+    height: 100px;
+    display: none;
+    pointer-events: none;
+}
+
+#zoomLens {
+    width: 600px; /* Largura fixa do zoom */
+    height: 500px; /* Altura fixa do zoom */
+    border: 2px solid #ccc; /* Borda visível */
+    background-repeat: no-repeat; /* Evita repetição */
+    background-size: cover; /* Ampliação */
+    position: fixed;
+    top: 47%;
+    right: 32%;
+    transform: translateY(-50%); /* Centraliza no eixo Y */
+    z-index: 1000; /* Garante que o zoom esteja acima de outros elementos */
+    display: none; /* Inicialmente oculto */
+    background-color: #fff; /* Fundo branco para contraste */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    pointer-events: none; /* Impede interações */
+}
+
+.login-card {
+    border-radius: 10px;
+}
+
+.login-card h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+.btn-primary {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #357ab8;
+    border-color: #357ab8;
+}
+
+
+/* Container principal */
+.checkout-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Título principal */
+.checkout-title {
+    font-size: 2.5rem;
+    color: #4A235A; /* Roxo escuro */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Grid principal */
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Seção de título */
+.section-title {
+    font-size: 1.5rem;
+    color: #7D3C98; /* Roxo médio */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #DCC7E1;
+    padding-bottom: 5px;
+}
+
+/* Endereço */
+.address-section, .order-summary {
+    background: #F6F6F6; /* Cinza claro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulário de endereço */
+.address-form label {
+    display: block;
+    font-size: 1rem;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.address-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Botões específicos do checkout */
+.checkout-container .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Botão de envio no checkout */
+.checkout-container .btn-submit {
+    background-color: #7D3C98; /* Roxo médio */
+    color: #fff; /* Texto branco */
+    border: none;
+}
+
+.checkout-container .btn-submit:hover {
+    background-color: #4A235A; /* Roxo escuro */
+    color: #fff; /* Texto branco permanece */
+}
+
+/* Botão de edição no checkout */
+.checkout-container .btn-edit {
+    background-color: #4A235A; /* Roxo escuro */
+    color: #fff; /* Texto branco */
+    border: none;
+}
+
+.checkout-container .btn-edit:hover {
+    background-color: #7D3C98; /* Roxo médio */
+    color: #fff; /* Texto branco permanece */
+}
+
+/* Botão de borda no checkout */
+.checkout-container .btn-outline-black {
+    color: #4A235A; /* Roxo escuro */
+    border: 2px solid #4A235A; /* Borda roxa */
+    background-color: transparent;
+}
+
+.checkout-container .btn-outline-black:hover {
+    background-color: #4A235A; /* Fundo roxo escuro */
+    color: #fff; /* Texto branco */
+}
+
+
+/* Resumo do pedido */
+.order-summary {
+    background: #F6F6F6;
+}
+
+.summary-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.product-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.order-details {
+    flex: 1;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+
+.product-quantity, .product-subtotal {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.total {
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4A235A;
+    margin-top: 20px;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.payment-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.payment-method input {
+    display: none;
+}
+
+.payment-method label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.payment-method input:checked + label {
+    border-color: #7D3C98; /* Roxo médio */
+    background-color: #F6F6F6;
+}
+
+.payment-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Formulário de Cartão */
+.card-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-form label {
+    font-size: 1rem;
+    color: #333;
+}
+
+.card-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Seção de Cupom */
+.coupon-section {
+    margin-bottom: 20px;
+}
+
+.coupon-applied {
+    background-color: #F6F6F6;
+    padding: 15px;
+    border: 2px solid #7D3C98;
+    border-radius: 8px;
+}
+
+.coupon-applied p {
+    margin: 5px 0;
+}
+
+.coupon-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.coupon-input input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.coupon-error {
+    color: #E74C3C;
+    margin-top: 10px;
+}
+
+
+

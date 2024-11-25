@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  nocturne_app:
+    build:
+      context: ./php
+    container_name: nocturne_php
+    volumes:
+      - ./laravel:/var/www/html
+    networks:
+      - nocturne_network
+    environment:
+      - PHP_OPCACHE_VALIDATE_TIMESTAMPS=0
+
+  nocturne_webserver:
+    image: nginx:latest
+    container_name: nocturne_webserver
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./laravel:/var/www/html
+    depends_on:
+      - nocturne_app
+    networks:
+      - nocturne_network
+
+  nocturne_mysql:
+    image: mysql:8.0
+    container_name: nocturne_mysql
+    ports:
+      - "3608:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: secret
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - nocturne_network
+
+volumes:
+  mysql_data:
+
+networks:
+  nocturne_network:
