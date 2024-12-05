@@ -3,7 +3,7 @@
         {{-- Ícones à Esquerda --}}
         <div class="d-flex align-items-center position-relative">
             {{-- Ícone de Usuário --}}
-            <a href="#" class="me-3 text-dark">
+            <a href="{{ route('login') }}" class="me-3 text-dark">
                 <i class="fa-solid fa-user fa-2x"></i> {{-- Aumentado para fa-2x --}}
             </a>
 
