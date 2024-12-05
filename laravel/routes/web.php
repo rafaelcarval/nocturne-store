@@ -71,3 +71,26 @@ Route::get('/test-log', function () {
     //return 'Log registrado.';
     return csrf_token();
 });
+
+// Páginas institucionais
+Route::view('/about', 'pages.about')->name('about');
+Route::view('/contact', 'pages.contact')->name('contact');
+Route::view('/returns', 'pages.returns')->name('returns');
+Route::view('/shipping', 'pages.shipping')->name('shipping');
+Route::view('/terms', 'pages.terms')->name('terms');
+
+// Página para ONGs
+Route::get('/ongs', function () {
+    return view('pages.ongs');
+})->name('ongs');
+
+Route::post('/ongs/contact', function (Illuminate\Http\Request $request) {
+    $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|email',
+        'message' => 'required|string|max:1000',
+    ]);
+
+    // Lógica de envio do formulário (salvar no banco, enviar email, etc.)
+    return redirect()->route('ongs')->with('success', 'Sua mensagem foi enviada com sucesso!');
+})->name('ongs.contact');
