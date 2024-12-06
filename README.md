@@ -79,11 +79,12 @@ cp .env.example .env
 
 Depois, acesse o contêiner do PHP para executar os comandos necessários:
 
-```bash
 # Para acessar o contêiner
+```bash
 docker exec -it nocturne_php bash
-
+```
 # Agora, dentro do contêiner, execute:
+```bash
 composer install
 php artisan key:generate
 php artisan migrate
@@ -98,11 +99,12 @@ exit
 ### **5. Configurar Permissões**
 Garanta que o Laravel tenha as permissões corretas para os diretórios `storage` e `bootstrap/cache`:
 
-```bash
 # Para acessar o contêiner
+```bash
 docker exec -it nocturne_php bash
-
+```
 # Agora, dentro do contêiner, execute:
+```bash
 chmod -R 775 /var/www/html/storage
 chown -R www-data:www-data /var/www/html/storage
 exit
