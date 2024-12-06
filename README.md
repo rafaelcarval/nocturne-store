@@ -217,6 +217,181 @@ Este serviço configura o banco de dados MySQL para a aplicação Laravel.
       - nocturne_network
 ```
 
+# Comandos Básicos do Git
+
+## 1. Configuração Inicial
+Configure o Git no seu sistema:
+```bash
+git config --global user.name "Seu Nome"
+git config --global user.email "seuemail@exemplo.com"
+```
+
+Verifique as configurações atuais:
+```bash
+git config --list
+```
+
+---
+
+## 2. Criar ou Clonar um Repositório
+### Criar um novo repositório:
+```bash
+git init
+```
+
+### Clonar um repositório existente:
+```bash
+git clone <URL_DO_REPOSITORIO>
+```
+
+Exemplo:
+```bash
+git clone https://github.com/rafaelcarval/nocturne-store.git
+```
+
+---
+
+## 3. Verificar o Status e Histórico
+### Verificar o status do repositório:
+```bash
+git status
+```
+
+### Exibir o histórico de commits:
+```bash
+git log
+```
+
+Para um histórico resumido:
+```bash
+git log --oneline
+```
+
+---
+
+## 4. Trabalhar com Arquivos
+### Adicionar arquivos ao staging (preparar para commit):
+```bash
+git add <arquivo>
+```
+
+Para adicionar todos os arquivos:
+```bash
+git add .
+```
+
+### Fazer um commit:
+```bash
+git commit -m "Mensagem do commit"
+```
+
+---
+
+## 5. Trabalhar com Remotes (Repositórios Remotos)
+### Adicionar um repositório remoto:
+```bash
+git remote add origin <URL_DO_REPOSITORIO>
+```
+
+### Verificar os repositórios remotos:
+```bash
+git remote -v
+```
+
+---
+
+## 6. Enviar e Receber Alterações
+### Enviar commits para o repositório remoto:
+```bash
+git push origin <nome_da_branch>
+```
+
+Para enviar a branch principal (geralmente `main`):
+```bash
+git push origin main
+```
+
+### Baixar alterações do repositório remoto:
+```bash
+git pull origin <nome_da_branch>
+```
+
+---
+
+## 7. Branches
+### Listar branches:
+```bash
+git branch
+```
+
+### Criar uma nova branch:
+```bash
+git branch <nome_da_branch>
+```
+
+### Trocar para outra branch:
+```bash
+git checkout <nome_da_branch>
+```
+
+### Criar e trocar para a nova branch:
+```bash
+git checkout -b <nome_da_branch>
+```
+
+### Mesclar uma branch à branch atual:
+```bash
+git merge <nome_da_branch>
+```
+
+---
+
+## 8. Resolver Conflitos
+Se houver conflitos ao mesclar ou ao fazer pull:
+1. Edite os arquivos com conflitos.
+2. Após resolver, adicione as alterações:
+   ```bash
+   git add <arquivo>
+   ```
+3. Finalize o commit:
+   ```bash
+   git commit
+   ```
+
+---
+
+## 9. Desfazer Alterações
+### Reverter alterações de um arquivo (antes de commitar):
+```bash
+git checkout -- <arquivo>
+```
+
+### Desfazer um commit local (mantendo as alterações):
+```bash
+git reset --soft HEAD~1
+```
+
+### Desfazer um commit local (removendo as alterações):
+```bash
+git reset --hard HEAD~1
+```
+
+---
+
+## 10. Excluir e Limpar
+### Remover um arquivo do repositório (mas mantê-lo localmente):
+```bash
+git rm --cached <arquivo>
+```
+
+### Limpar arquivos não rastreados:
+```bash
+git clean -f
+```
+
+---
+
+
 ---
 
 ## 🎉 **Contribuições**
