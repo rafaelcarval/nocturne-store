@@ -4,7 +4,7 @@
 <div class="container my-5">
     <h1 class="text-center mb-4">Sobre Nós</h1>
     <p>
-        Na **Nocturne**, acreditamos que estilo e sustentabilidade podem caminhar juntos. Nossa missão é oferecer 
+        Na Nocthurne, acreditamos que estilo e sustentabilidade podem caminhar juntos. Nossa missão é oferecer 
         produtos que não apenas atendam às necessidades de nossos clientes, mas que também impactem positivamente 
         o mundo ao nosso redor.
     </p>
