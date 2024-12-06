@@ -99,7 +99,7 @@ exit
 ### **5. Configurar Permissões**
 Garanta que o Laravel tenha as permissões corretas para os diretórios `storage` e `bootstrap/cache`:
 
-# Para acessar o contêiner
+Para acessar o contêiner
 ```bash
 docker exec -it nocturne_php bash
 ```
