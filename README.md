@@ -11,9 +11,9 @@ Ambiente completo para a estrutura de uma loja e sua dependências e fluxos, des
 2. [Configuração do Ambiente](#configuração-do-ambiente)
    - [Pré-requisitos](#1-pré-requisitos)
    - [Clonar o Repositório](#2-clonar-o-repositório)
-   - [Configurar o Laravel](#3-configurar-o-laravel)
-   - [Configurar Permissões](#4-configurar-permissões)
-   - [Iniciar os Contêineres com Docker](#5-iniciar-os-contêineres-com-docker)
+   - [Iniciar os Contêineres com Docker](#3-iniciar-os-contêineres-com-docker)
+   - [Configurar o Laravel](#4-configurar-o-laravel)
+   - [Configurar Permissões](#5-configurar-permissões)   
    - [Instalar Dependências do Front-End](#6-instalar-dependências-do-front-end)
    - [Acessar a Aplicação](#7-acessar-a-aplicação)
 3. [Arquivo .env](#📁-arquivo-env)
@@ -49,48 +49,9 @@ Certifique-se de ter as ferramentas abaixo instaladas:
 git clone https://github.com/seuusuario/nocturne-store.git
 cd nocturne-store
 ```
-
 ---
 
-### **3. Configurar o Laravel**
-Após clonar o repositório, copie o arquivo `.env.example` para `.env`:
-
-```bash
-cp .env.example .env
-```
-
-Depois, inicie o contêiner e acesse o contêiner do Laravel para executar os comandos necessários:
-
-```bash
-# Para a criação dos contêiners:
-docker compose up -d
-
-# Para acessar o contêiner
-docker exec -it nocturne_php bash
-
-# Agora, dentro do contêiner, execute:
-composer install
-php artisan key:generate
-php artisan migrate
-php artisan db:seed
-exit
-```
-
-> **Nota:** Certifique-se de configurar as variáveis de ambiente no arquivo `.env`, como o banco de dados e credenciais.
-
----
-
-### **4. Configurar Permissões**
-Garanta que o Laravel tenha as permissões corretas para os diretórios `storage` e `bootstrap/cache`:
-
-```bash
-chmod -R 775 /var/www/html/storage
-chown -R www-data:www-data /var/www/html/storage
-```
-
----
-
-### **5. Iniciar os Contêineres com Docker**
+### **3. Iniciar os Contêineres com Docker**
 Use o Docker Compose para construir e iniciar os serviços:
 
 ```bash
@@ -108,10 +69,52 @@ Este comando irá:
 
 ---
 
-### **6. Instalar Dependências do Front-End**
-Entre no contêiner Laravel para instalar as dependências do front-end e compilar os arquivos:
+### **4. Configurar o Laravel**
+Após clonar o repositório, copie o arquivo `.env.example` para `.env`:
 
 ```bash
+cd laravel
+cp .env.example .env
+```
+
+Depois, acesse o contêiner do PHP para executar os comandos necessários:
+
+```bash
+# Para acessar o contêiner
+docker exec -it nocturne_php bash
+
+# Agora, dentro do contêiner, execute:
+composer install
+php artisan key:generate
+php artisan migrate
+php artisan db:seed
+exit
+```
+
+> **Nota:** Certifique-se de configurar as variáveis de ambiente no arquivo `.env`, como o banco de dados e credenciais.
+
+---
+
+### **5. Configurar Permissões**
+Garanta que o Laravel tenha as permissões corretas para os diretórios `storage` e `bootstrap/cache`:
+
+```bash
+# Para acessar o contêiner
+docker exec -it nocturne_php bash
+
+# Agora, dentro do contêiner, execute:
+chmod -R 775 /var/www/html/storage
+chown -R www-data:www-data /var/www/html/storage
+exit
+```
+
+---
+
+### **6. Instalar Dependências do Front-End**
+Entre na pasta Laravel para instalar as dependências do front-end e compilar os arquivos:
+
+```bash
+cd laravel
 npm install
 npm run dev
 ```
