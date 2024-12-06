@@ -1,6 +1,6 @@
 <div class="my-5">
     <h2 class="text-center">{{ $title }}</h2>
-    <div id="{{ $id }}" class="carousel slide" data-bs-ride="carousel">
+    <div id="{{ $id }}" class="carousel slide" data-bs-ride="carousel" style="margin-top: 15px;">
         <div class="carousel-inner">
             @foreach (array_chunk($products->toArray(), 4) as $index => $productChunk)
                 <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">

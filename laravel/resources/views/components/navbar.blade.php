@@ -3,7 +3,7 @@
         {{-- Ícones à Esquerda --}}
         <div class="d-flex align-items-center position-relative">
             {{-- Ícone de Usuário --}}
-            <a href="#" class="me-3 text-dark">
+            <a href="{{ route('login') }}" class="me-3 text-dark">
                 <i class="fa-solid fa-user fa-2x"></i> {{-- Aumentado para fa-2x --}}
             </a>
 
@@ -46,27 +46,25 @@
     <div class="offcanvas-body">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#store">Loja</a>
+                <a class="nav-link" href="{{ route('about') }}">Sobre Nós</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#thrift-store">Brejó (Thrift Store)</a>
+                <a class="nav-link" href="{{ route('contact') }}">Contato</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#about-us">Sobre Nós</a>
+                <a class="nav-link" href="{{ route('returns') }}">Trocas e Devoluções</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#contact">Contato</a>
+                <a class="nav-link" href="{{ route('shipping') }}">Envio e Pagamento</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#returns">Trocas e Devoluções</a>
+                <a class="nav-link" href="{{ route('terms') }}">Termos de Uso</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#shipping">Envio e Pagamento</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#terms">Termos de Uso</a>
+                <a class="nav-link" href="{{ route('ongs') }}">ONGs</a>
             </li>
         </ul>
+
     </div>
 </div>
 
