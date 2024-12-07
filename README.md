@@ -27,7 +27,7 @@ Ambiente completo para a estrutura de uma loja e sua dependências e fluxos, des
 
 O projeto está dividido nos seguintes diretórios principais:
 
-- **`laravel`**: Contém o código-fonte da aplicação Laravel.
+- **`laravel`**: Contém o código-fonte da aplicação Laravel (framework PHP)
 - **`nginx`**: Configurações do servidor web Nginx.
 - **`php`**: Configurações específicas do ambiente PHP.
 - **`docker-compose.yml`**: Orquestra os serviços usando Docker Compose.
